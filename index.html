@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio websites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="C:\Users\am708\Desktop\portfolio\image\icon.png" alt="logo">
+                <ul>
+                    <li><a href="#">Home</a> </li>
+                    <li><a href="#">About</a> </li>
+                   <!--- <li><a href="#">Services</a> </li-->>
+                   <!--<li><a href="#">Portfolio</a> </li>--> 
+                    <li><a href="#">Contact</a> </li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web developer</p>
+                <h1>Hi,I'm <span>Ayush</span> </h1>
+            </div>
+
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="C:\Users\am708\Desktop\portfolio\image\profilephoto.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="aboutme">My name is Ayush Maurya currently persusing B.TECH from CSE. <br> I am a competitive programmer as well as blockchain enthusiast.
+                        Wanna become a web3 developer. I am pretty good at problem solving at different competitive coding platform.
+                        Love watching movie and series.Big fan of MCU.
+                        <br>
+                        I have a interest on history.I love reading and listening about history.Big fan of Roman empire (<em>Break the wall</em>).
+                        <br>
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills" >
+                        <ul>
+                            <li> <span> Competitive Coding</span> <br> Code forces/Codechef </li>
+                            <li> <span> Web Development</span> <br> Frontend  </li>
+                            <li> <span> Blockchain Development</span> <br> Solidity </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li> <span> Fossc(dsc) 2022- </span> <br> Blockchain developer </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li> <span> Engineering </span> <br> KIET Group of Institution </li>
+                            <li> <span> Schooling</span> <br> IPEM International School  </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablinks of tablinks){
+                tablinks.classList.remove("active-link");
+            }
+            for(tabcontents of tabcontents){
+                tabcontents.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
